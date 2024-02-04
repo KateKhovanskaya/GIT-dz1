@@ -1,9 +1,15 @@
 package com.example.UserRestAPIApp.domain;
 
 public class User {
+    private int id;
+
     private String name;
     private int age;
     private String email;
+
+    public int getId() {
+        return id;
+    }
 
     public String getName() {
         return name;
@@ -15,6 +21,10 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setName(String name) {

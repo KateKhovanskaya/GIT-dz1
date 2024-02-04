@@ -19,7 +19,7 @@ public class RegistrationService {
 
     public User processRegistration(String name, int age, String email){
         User user =  userService.createUser(name, age, email);
-        dataProcessingService.getRepository().getUsers().add(user);
+        dataProcessingService.getRepository().save(user);
         notificationService.sendNotification("A new user has been created: " + name);
         return user;
     }
